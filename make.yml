@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true 
+  gather_facts: no 
+  user: root
+  tasks:
+     - name: make the file 
+       shell: mkdir dhanashree.txt
