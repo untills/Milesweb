@@ -6,3 +6,5 @@
   tasks:
      - name: make the file 
        shell: w
+       register: output
+        msg: "{{output.stdout_line}}" 
