@@ -1,8 +1,10 @@
 ---
-- hosts: all
+- hosts: webserver
   become: true 
   gather_facts: no 
   user: root
   tasks:
      - name: make the file 
-       shell: mkdir dhanashree.txt
+       shell: w
+       register: output
+        msg: "{{output.stdout_line}}" 
